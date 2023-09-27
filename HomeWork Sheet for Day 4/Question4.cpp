@@ -1,19 +1,11 @@
 #include<iostream>
 using namespace std;
 
-/* Question 4: Ticket Price Calculator: Create a program that asks the user for their 
-age and checks if they qualify for a discounted ticket price (e.g., under 12 and over 65 
-get discounts), If they are eligible print “YES” else “NO”. */
+/* Question 4: There is an Arithmetic Progression, First number is 220 and Common Difference is 7. So 
+print all the numbers from 220 to 730 which follow the AP. */
 
 int main(){
-    int age;
-    cout<<"Please, Enter your age: ";
-    cin>>age;
-
-    if (age < 12 || age > 65){
-        cout<<"Yes";
-    }
-    else {
-        cout<<"No";
+    for(int start=220; start<=730; start=start + 220){
+        cout<<start <<" ";
     }
 }

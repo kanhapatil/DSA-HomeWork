@@ -1,10 +1,19 @@
 #include<iostream>
 using namespace std;
 
-/* Question 2: Print char from ‘A’ to ‘Z’ with the help of a for loop. */
+// Pattern no. 2
+// 1 4 9 16 25
+// 1 4 9 16 25
+// 1 4 9 16 25
+// 1 4 9 16 25
+// 1 4 9 16 25
+// 1 4 9 16 25
 
 int main(){
-    for(char alphabet='A'; alphabet <='Z'; alphabet++){
-        cout<<alphabet <<" ";
+    for(int i=1; i<=5; i++){
+        for(int j=1; j<=5; j++){
+            cout<<j*j <<" ";
+        }
+        cout<<endl;
     }
 }
