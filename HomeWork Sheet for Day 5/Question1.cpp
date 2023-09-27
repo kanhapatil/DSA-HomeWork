@@ -1,18 +1,10 @@
 #include<iostream>
 using namespace std;
 
-// Pattern no. 1
-// 4 4 4 4 4 4
-// 4 4 4 4 4 4
-// 4 4 4 4 4 4  
-// 4 4 4 4 4 4
-// 4 4 4 4 4 4 
+/* Question 1: Print number from 280 to 250 with the help of for loop. */
 
 int main(){
-    for(int i=1; i<=5; i++){
-        for(int j=1; j<=6; j++){
-            cout<<4 <<" ";
-        }
-        cout<<endl;
+    for(int start=280; start>=250; start--){
+        cout<<start <<" ";
     }
 }

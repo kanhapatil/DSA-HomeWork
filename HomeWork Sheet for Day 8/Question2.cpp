@@ -2,22 +2,18 @@
 using namespace std;
 
 // Pattern no. 2
-// A
-// A B
-// A B C
-// A B C D
-// A B C D E
-
+// 1 4 9 16 25
+// 1 4 9 16 25
+// 1 4 9 16 25
+// 1 4 9 16 25
+// 1 4 9 16 25
+// 1 4 9 16 25
 
 int main(){
-    char alpha = 'A';
-
     for(int i=1; i<=5; i++){
-        for(int j=1; j<=i; j++){
-            cout<<alpha <<" ";
-            alpha = alpha + 1;
+        for(int j=1; j<=5; j++){
+            cout<<j*j <<" ";
         }
-        alpha = alpha - i;
         cout<<endl;
     }
 }
