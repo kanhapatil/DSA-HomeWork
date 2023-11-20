@@ -11,29 +11,31 @@ int findThirdLargest(int arr[], int n) {
         return -1;
     }
 
-    int largest = arr[0];
-    int secondLargest = INT_MIN;
-    int thirdLargest = INT_MIN;
-
-    for (int i = 1; i < n; i++) {
-        if (arr[i] > largest) {
-            thirdLargest = secondLargest;
-            secondLargest = largest;
-            largest = arr[i];
-        } else if (arr[i] > secondLargest && arr[i] < largest) {
-            thirdLargest = secondLargest;
-            secondLargest = arr[i];
-        } else if (arr[i] > thirdLargest && arr[i] < secondLargest) {
-            thirdLargest = arr[i];
+    // Find smallest element
+    int smallest = INT_MAX;
+    for(int i=0; i<n; i++){
+        if(arr[i] < smallest){
+            smallest = arr[i];
         }
     }
 
-    if (thirdLargest == INT_MIN) {
-        cout << "There is no third largest element." << endl;
-        return -1;
+    // Find secondSmallest element
+    int secondSmallest = INT_MAX;
+    for(int i=0; i<n; i++){
+        if(arr[i] < secondSmallest && arr[i] > smallest){
+            secondSmallest = arr[i];
+        }
     }
 
-    return thirdLargest;
+    // Find thirdSmallest element
+    int thirdSmallest = INT_MAX;
+    for(int i=0; i<n; i++){
+        if(arr[i] < thirdSmallest && arr[i] > secondSmallest){
+            thirdSmallest = arr[i];
+        }
+    }
+    
+    return thirdSmallest;
 }
 
 int main() {
@@ -43,7 +45,7 @@ int main() {
     int thirdLargest = findThirdLargest(arr, n);
 
     if (thirdLargest != -1) {
-        cout << "The third largest element is: " << thirdLargest << endl;
+        cout << "The third smallest element is: " << thirdLargest << endl;
     }
 
     return 0;
