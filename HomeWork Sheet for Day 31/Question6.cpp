@@ -44,17 +44,18 @@ int CountOccurrence(int arr[], int n, int key){
         }
     }
 
-    // We have first and last occurrence of an element
-    // So, now we can calculate of count of an element using first and last occurrence
-    // Formula : first - last + 1
-    int result = last - first + 1;
-    return result;
+    if(first == -1 || last == -1){
+        return 0;
+    }
+    else{
+        return last - first + 1;
+    }
 }
 
 int main(){
     int arr[] = {1, 2, 2, 2, 3, 3, 4, 4, 4, 4, 6};
     int n = sizeof(arr) / sizeof(arr[0]);
-    int key = 6;
+    int key = 5;
 
     // Calling function CountOccurrence
     cout<<"Occurrences of " <<key <<" is " <<CountOccurrence(arr, n, key);

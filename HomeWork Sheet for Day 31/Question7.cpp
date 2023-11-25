@@ -5,8 +5,8 @@ using namespace std;
 
 int CubeRoot(int n){
     // Base case 
-    if (n == 0){
-        return 0;
+    if (n == 0 || n == 1){
+        return 1;
     }
 
     int start = 1, end = n, ans = 0;
@@ -33,7 +33,7 @@ int CubeRoot(int n){
 }
 
 int main(){
-    int n = 3;
+    int n = 8;
 
     // Calling function CubeRoot
     cout<<CubeRoot(n);
